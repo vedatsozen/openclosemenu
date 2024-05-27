@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 50</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="left">
+    <ul>
+        <li>
+            <a href="#" id="btn1" onclick="showImage(1)">First</a>
+        </li>
+        <li>
+            <a href="#" id="btn2" onclick="showImage(2)">Second</a>
+        </li>
+        <li>
+            <a href="#" id="btn3" onclick="showImage(3)">Third</a>
+        </li>
+        <li>
+            <a href="#" id="btn4" onclick="showImage(4)">Forth</a>
+        </li>
+        <li>
+            <a href="#" id="btn5" onclick="showImage(5)">Fifth</a>
+        </li>
+        <li>
+            <a href="#" id="btn6" onclick="showImage(6)">Sixth</a>
+        </li>
+    </ul>
+</div>
+
+<div id="right">
+
+<img id="rightimg" src="imgs/resim1.jpg">
+
+</div>
+
+<button id="ackapa">CLOSE MENU</button>
+
+<script>
+
+let isClicked = false;
+
+function showImage(imgnumber) {
+
+document.getElementById("rightimg").src = "imgs/resim" + imgnumber + ".jpg";
+
+}
+
+document.getElementById("ackapa").addEventListener("click", function() {
+
+document.getElementById("left").classList.toggle("slideleft");
+document.getElementById("right").classList.toggle("tofull");
+
+if (!isClicked) {
+this.innerHTML = "OPEN MENU";
+}
+
+else {
+    this.innerHTML = "CLOSE MENU";
+}
+
+isClicked = !isClicked;
+
+})
+
+</script>
+</body>
+</html>

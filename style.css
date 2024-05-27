@@ -1,0 +1,136 @@
+body {
+    text-align: center;
+    padding: 0px;
+    margin: auto 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+  
+    box-sizing: border-box; 
+    font-family: 'Menu', sans-serif;
+}
+
+@font-face {
+    font-family: 'Menu';
+    src: url('fonts/superstar.ttf') format('truetype');
+}
+
+
+:root {
+    --renk1:#008080;
+    --renk2:#f0fded;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+div#left {
+    margin: auto;
+    height:100vh;
+    width:20%;
+    background-color: var(--renk1);
+    position:relative;
+    transition: 500ms ease;
+}
+
+
+#left > ul {
+    margin: auto;
+    margin-top: 20px;
+    padding: 0px;
+    width:80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+#left > ul > li {
+    display: inline-block;
+    width: 100%;
+   
+}
+
+#left > ul > li > a {
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 100%;
+    background-color: var(--renk2);
+    color: var(--renk1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#left > ul > li > a:hover {
+    box-shadow: 0 0 20px black;
+}
+
+#left > ul > li > a:active {
+    background-color:black;
+}
+
+div#right {
+    margin: auto;
+    height:100vh;
+    width:80%;
+    background-color:var(--renk2);
+    padding: 0px;
+}
+
+img#rightimg {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+button#ackapa {
+    position: fixed;
+    top: 10px;
+    right:10px;
+    padding: 5px;
+    background-color: var(--renk1);
+    color: var(--renk2);
+    font-size: 20px;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+button#ackapa:hover {
+    background-color: var(--renk2);
+    color: var(--renk1);
+}
+
+button#ackapa:active {
+    transform: scale(0.95);
+}
+
+.slideleft {
+    transform: translateX(-100%);
+    transition: 500ms ease;
+}
+
+#right.tofull {
+    transition: 500ms ease;
+    position: absolute;
+    width: 100%;
+}
